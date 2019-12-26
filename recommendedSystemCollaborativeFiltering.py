@@ -63,7 +63,7 @@ for name, group in userSubsetGroup:
     tempGroupRatingList = group['rating'].tolist()
     Sxx = sum([i ** 2 for i in tempRatingList]) - pow(sum(tempRatingList), 2) / float(nRatings)
     Syy = sum([i ** 2 for i in tempGroupRatingList]) - pow(sum(tempGroupRatingList), 2) / float(nRatings)
-    Sxy = sum(i * j for i, j in zip(tempRatingList, tempGroupRatingList)) - sum(tempRatingList) * sum(tempGroupRatingList) / float(
+    Sxy = sum(i * j for i, j in zip(tempRatingList, tempGroupRatingList)) - (sum(tempRatingList) * sum(tempGroupRatingList)) / float(
         nRatings)
 
     if Sxx != 0 and Syy != 0:
